@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Portal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f4f6; /* Light background color */
+            color: #333; /* Dark text color */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            display: flex; /* Center container horizontally */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Align items vertically */
+            position: relative; /* Add relative positioning */
+        }
+
+
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 1200px; /* Increased max-width */
+            background-color: #fff; /* White background */
+            border-radius: 20px;
+            padding: 2em;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Lighter box shadow */
+            display: flex; /* Add display flex to align items */
+            align-items: center; /* Center vertically */
+            height: 60vh; /* Decreased height back to 60vh */
+            flex-direction: column; /* Align items vertically */
+            margin-top: 3em; /* Add margin to move container downwards */
+        }
+
+        .container img {
+            width: 250px; /* Increased image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 2em; /* Add some space below the image */
+        }
+
+        h2 {
+            margin: 0; /* Remove default margin */
+            font-size: 2rem; /* Larger font size */
+            text-align: center; /* Center text */
+            margin-bottom: 1em; /* Add space below the heading */
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the cards horizontally */
+            gap: 1.5rem;
+        }
+
+        .card {
+            max-width: 320px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(243, 244, 246);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background-color: #fff;
+        }
+
+        .card .header {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .card .title {
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+            font-weight: 700;
+            color: #111; /* Darker title color */
+            text-decoration: none;
+        }
+
+        .card .title:hover {
+            text-decoration: underline;
+            color: royalblue; /* Link color on hover */
+        }
+
+        .card .description {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            color: #555; /* Darker text color */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: auto;
+                padding: 1em;
+            }
+
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="logo.css">
+</head>
+
+<body>
+    <!-- Logo container -->
+    <a href="#"><img src="logo.png" alt="Logo" class="logo"></a>
+
+    <!-- Container for the main content -->
+    <div class="container">
+        <h2>Welcome to the Achievement Portal</h2>
+        <img src="bg.png" alt="Background Image">
+        <div class="cards-container">
+            <div class="card">
+                <div class="header">
+                    <div>
+                        <a class="title" href="user_login.html">User Login</a>
+                    </div>
+                    <span class="image"></span>
+                </div>
+                <p class="description">
+                    Click the link above to log in as a user.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    <div>
+                        <a class="title" href="user_register.html">User Register</a>
+                    </div>
+                    <span class="image"></span>
+                </div>
+                <p class="description">
+                    Click the link above to register as a new user.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    <div>
+                        <a class="title" href="admin_login.html">Admin Login</a>
+                    </div>
+                    <span class="image"></span>
+                </div>
+                <p class="description">
+                    Click the link above to log in as an admin.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

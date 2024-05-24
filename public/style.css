@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6; /* Light background color */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    height: 100vh;
+    color: #333; /* Dark text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* White background */
+    border-radius: 20px;
+    padding: 2em;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Lighter box shadow */
+    transition: all 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+}
+
+h2 {
+    color: #333; /* Dark text color */
+    margin-bottom: 1.5em;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 1.5rem;
+}
+
+.card {
+    max-width: 320px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(243, 244, 246);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #fff; /* White background */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: #111; /* Darker title color */
+    text-decoration: none;
+}
+
+.title:hover {
+    text-decoration: underline;
+    color: royalblue; /* Link color on hover */
+}
+
+.image {
+    display: block;
+    flex-shrink: 0;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    background-color: royalblue; /* Fallback color for image */
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #555; /* Darker text color */
+}
+
+.post-info {
+    margin-top: 1.5rem;
+    display: flex;
+    grid-gap: 1rem;
+    gap: 1rem;
+}
+
+.cr {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.dt {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: #555; /* Darker text color */
+}
+
+.dd {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #777; /* Lighter text color */
+}

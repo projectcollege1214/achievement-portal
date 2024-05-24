@@ -1,0 +1,8 @@
+.logo {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Set the size of the logo */
+    height: auto;
+}

@@ -1,0 +1,58 @@
+{
+  "certificates": [
+    {
+      "id": "1716123878824",
+      "user": "Ali",
+      "category": "antragini",
+      "type": "technical",
+      "file": "1716123878817-Aliasgar Jiwani (1).pdf",
+      "status": "approved"
+    },
+    {
+      "id": "1716128023804",
+      "user": "Titiksha",
+      "category": "antragini",
+      "type": "technical",
+      "file": "1716128023777-Aliasgar Jiwani (1).pdf",
+      "status": "approved"
+    },
+    {
+      "id": "1716186129067",
+      "user": "ABC",
+      "category": "ieee",
+      "type": "technical",
+      "file": "1716186129057-Aliasgar Jiwani (1).pdf",
+      "status": "approved"
+    },
+    {
+      "id": "1716294706550",
+      "user": "Vrushabh",
+      "category": "antragini",
+      "type": "technical",
+      "file": "1716294706541-Ali UG Marksheet.pdf",
+      "status": "approved"
+    }
+  ],
+  "users": [
+    {
+      "username": "Ali",
+      "password": "1234"
+    },
+    {
+      "username": "Titiksha",
+      "password": "1234"
+    },
+    {
+      "username": "ABC",
+      "password": "1234"
+    },
+    {
+      "username": "Vrushabh",
+      "password": "1234"
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "password": "admin"
+  }
+}
