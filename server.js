@@ -37,7 +37,16 @@ let data = {
     admin: {
         username: 'admin',
         password: 'admin'
-    }
+    },
+    additionalAdmins: [
+        { username: "Titiksha Tijare", password: "Titiksha" },
+        { username: "Palak Bhimke", password: "Palak" },
+        { username: "Shivanjali Lokhande", password: "Shivanjali" },
+        { username: "Ojashree Raut", password: "Ojashree" },
+        { username: "Shreya Bommarapu", password: "Shreya" },
+        { username: "Shweta Bhelonde", password: "Shweta" },
+        { username: "Pooja Bhole", password: "Pooja" }
+    ]
 };
 
 // Helper function to save data to JSON file
@@ -90,7 +99,10 @@ app.get('/certificates', (req, res) => {
 // Admin login
 app.post('/admin/login', (req, res) => {
     const { username, password } = req.body;
-    if (username === data.admin.username && password === data.admin.password) {
+    if (
+        (username === data.admin.username && password === data.admin.password) ||
+        data.additionalAdmins.some(admin => admin.username === username && admin.password === password)
+    ) {
         req.session.admin = true;
         res.redirect('/admin/dashboard');
     } else {
@@ -185,18 +197,18 @@ app.get('/view-certificates', (req, res) => {
 app.get('/approved-certificates', (req, res) => {
     const { category, type } = req.query;
     let approvedCertificates = data.certificates.filter(certificate => certificate.status === 'approved');
-    
+
     if (category) {
         approvedCertificates = approvedCertificates.filter(certificate => certificate.category === category);
     }
     if (type) {
         approvedCertificates = approvedCertificates.filter(certificate => certificate.type === type);
     }
-    
+
     res.json({ certificates: approvedCertificates });
 });
 
-// Reject certificate route
+// Reject certificate route (revised)
 app.post('/admin/certificates/reject/:certificateId', isAdmin, (req, res) => {
     const certificateId = req.params.certificateId;
     const certificateIndex = data.certificates.findIndex(certificate => certificate.id === certificateId);
@@ -209,9 +221,3 @@ app.post('/admin/certificates/reject/:certificateId', isAdmin, (req, res) => {
         res.status(404).send('Certificate not found');
     }
 });
-
-
-
-
-
-

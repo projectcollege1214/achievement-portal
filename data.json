@@ -31,6 +31,14 @@
       "type": "technical",
       "file": "1716294706541-Ali UG Marksheet.pdf",
       "status": "approved"
+    },
+    {
+      "id": "1716569188065",
+      "user": "ali",
+      "category": "antragini",
+      "type": "nontechnical",
+      "file": "1716569188049-Aliasgar Jiwani (1).pdf",
+      "status": "approved"
     }
   ],
   "users": [
@@ -49,10 +57,44 @@
     {
       "username": "Vrushabh",
       "password": "1234"
+    },
+    {
+      "username": "ali",
+      "password": "1234"
     }
   ],
   "admin": {
     "username": "admin",
     "password": "admin"
-  }
+  },
+  "additionalAdmins": [
+    {
+      "username": "Titiksha Tijare",
+      "password": "Titiksha"
+    },
+    {
+      "username": "Palak Bhimke",
+      "password": "Palak"
+    },
+    {
+      "username": "Shivanjali Lokhande",
+      "password": "Shivanjali"
+    },
+    {
+      "username": "Ojashree Raut",
+      "password": "Ojashree"
+    },
+    {
+      "username": "Shreya Bommarapu",
+      "password": "Shreya"
+    },
+    {
+      "username": "Shweta Bhelonde",
+      "password": "Shweta"
+    },
+    {
+      "username": "Pooja Bhole",
+      "password": "Pooja"
+    }
+  ]
 }
